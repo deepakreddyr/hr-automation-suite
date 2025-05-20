@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SheetForm from "@/components/dashboard/SheetForm";
 import ProcessingStats from "@/components/dashboard/ProcessingStats";
+import ShortlistedCandidates from "@/components/dashboard/ShortlistedCandidates";
 import { useToast } from "@/components/ui/use-toast";
 
 const Dashboard = () => {
@@ -123,8 +124,9 @@ const Dashboard = () => {
               </Card>
             </div>
           </TabsContent>
-          <TabsContent value="results" className="space-y-4">
+          <TabsContent value="results" className="space-y-6">
             <ProcessingStats stats={stats} />
+            <ShortlistedCandidates />
             <Card>
               <CardHeader>
                 <CardTitle>Process Summary</CardTitle>
